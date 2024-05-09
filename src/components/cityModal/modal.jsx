@@ -2,18 +2,20 @@
 import { useState } from 'react';
 import styles from './modal.module.css'
 import {} from '@mui/material'
-import { Search } from '@mui/icons-material';
+import { Close, Search } from '@mui/icons-material';
 
-const Modal = ({ onSubmit }) => {
+const Modal = ({ onSubmit, setOpen }) => {
   const [city, setCity] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit(city);
+    setOpen(false);
   };
 
   return (
-    <div className={styles.modal}>
+    <div className={styles.wrapper}>
+      <div className={styles.modal}>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -25,6 +27,8 @@ const Modal = ({ onSubmit }) => {
           <Search/>
         </button>
       </form>
+      <button onClick={() => setOpen(false)} className={styles.close}><Close/></button>
+    </div>
     </div>
   );
 };

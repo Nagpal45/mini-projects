@@ -9,6 +9,7 @@
     color: white;
     padding-left: 1vw;
     font-weight: 600;
+    z-index: 100;
 }
 
 .navItem{

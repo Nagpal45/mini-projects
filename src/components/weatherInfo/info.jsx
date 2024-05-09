@@ -7,6 +7,7 @@ import styles from './info.module.css'
 const Info = () => {
   const [weather, setWeather] = useState(null);
   const [city, setCity] = useState('Delhi');
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const fetchWeatherForCity = async () => {
@@ -24,8 +25,8 @@ const Info = () => {
 
   return (
     <div className={styles.info}>
-      <Modal onSubmit={handleCitySubmit} />
-      {weather && (
+      {open ? (<Modal onSubmit={handleCitySubmit} setOpen={setOpen}/>) : (<button className={styles.enterCity} onClick={() => setOpen(true)}>Enter Your City</button>)}
+      {weather && !open && (
         <div className={styles.weatherInfo}>
           <h2>Weather in {weather.name}</h2>
           <p>Temperature: {weather.main.temp}°C</p>
