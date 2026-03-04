@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout app</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .custom-checkbox {
+            --checkbox-checked-color: #7B91FF; 
+            --checkbox-border-color: #7B91FF;
+            --checkbox-bg-color: #ffffff; 
+            --checkbox-checkmark-color: #7B91FF; 
+            appearance: none;
+            width: 1.4em;
+            height: 1.4em;
+            border-radius: 4px;
+            border: 2px solid var(--checkbox-border-color);
+            background-color: var(--checkbox-bg-color);
+            display: inline-block;
+            vertical-align: middle;
+            cursor: pointer;
+            position: relative; 
+        }
+        .custom-checkbox::before {
+            content: '\2713';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--checkbox-checkmark-color);
+            font-size: 13px;
+            opacity: 0;
+        }
+
+        .custom-checkbox:checked::before {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body class="flex justify-center bg-sky-100 overflow-hidden">
+    <div
+      class="w-full h-screen bg-white flex justify-between items-center flex-col relative overflow-y-scroll"
+    >
+    <a href="goals.html"><img src="images/prev.svg" alt="" class="fixed top-7 left-4" /></a>
+     <div class="flex flex-col w-full items-center">
+        <h3 class="text-xl font-bold mt-6">Workout Tracker</h3>
+        <div class="w-1/2 mt-16 flex justify-between self-end items-center mr-12">
+          <div class="flex flex-col justify-center items-center ml-1">
+            <p class="text-xs">Good job</p>
+            <img src="images/info.svg" alt="">
+          </div>
+          <div class="flex flex-col justify-center items-center">
+            <p class="text-xs">less than 320cal</p>
+            <img src="images/info.svg" alt="">
+          </div>
+        </div>  
+        <img class="w-11/12" src="images/chart.svg" alt="" class="mt-1">
+        <div class="w-11/12 rounded-xl p-2 flex flex-row items-center mt-7" style="background: linear-gradient(90.07deg, rgba(129, 157, 255, 0.28) 5.94%, rgba(16, 16, 16, 0) 76.45%);
+        ">
+          <img class="ml-1 mr-4" src="images/alert.svg" alt="">
+          <p class="text-sm w-3/4">You've burned fewer calories than yesterday. Time to get moving!</p>
+        </div>
+        <div class="mt-12 flex flex-col w-11/12">
+          <div class="flex flex-row items-center justify-between">
+            <p class="font-bold">Upcoming Workout</p>
+            <p class="text-xs text-gray-500 cursor-pointer">See More</p>
+          </div>
+          <div class="w-full flex flex-row mt-4 items-center justify-between shadow-lg rounded-xl p-3">
+            <div class="flex flex-row items-center justify-center">
+              <img src="images/workout1.png" class="w-12 h-12 rounded-full " style="background: #819AFF26;
+            " />
+            <div class="ml-4">
+              <h3 class="text-sm">Full Body Workout</h3>
+              <p class="text-xs mt-1">Today 3pm</p>
+            </div>
+            </div>
+            <div class="flex items-center justify-center">
+              <label class="inline-flex items-center me-5 cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer" >
+                <div
+                " class="relative w-11 h-6 bg-indigo-400 rounded-full  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600 "></div>
+              </label>
+            </div>
+         </div>
+          <div class="w-full flex flex-row mt-4 items-center justify-between shadow-lg rounded-xl p-3">
+            <div class="flex flex-row items-center justify-center">
+              <img src="images/workout1.png" class="w-12 h-12 rounded-full " style="background: #819AFF26;
+            " />
+            <div class="ml-4">
+              <h3 class="text-sm">Upper Body Workout</h3>
+              <p class="text-xs mt-1">4 feb, 3:30 pm</p>
+            </div>
+            </div>
+            <div class="flex items-center justify-center">
+              <label class="inline-flex items-center me-5 cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer" >
+                <div
+                " class="relative w-11 h-6 bg-indigo-400 rounded-full  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600 "></div>
+              </label>
+            </div>
+         </div> 
+         </div>
+         <div class="flex items-start justify-start w-11/12 mt-4 flex-col mb-24">
+            <h3 class="font-bold">What Do You Want to Train</h3>
+            <div class="flex flex-row mt-4 w-full rounded-lg h-48 bg-indigo-200 p-4 justify-end">
+              <div class="flex flex-start w-full text-xs flex-col gap-2">
+                <p class="text-sm">Full Body Workout</p>
+                <p>Arms</p>
+                <p>Chest</p>
+                <p>Back</p>
+                <p>Shoulders</p>
+                <p>Legs</p>
+                <p>Abs</p>
+              </div>
+              <img src="images/workout.png" class="w-24 h-24 rounded-full" alt="" style="background: #FFFFFF7A;">
+            </div>
+            <h3 class="text-xl font-bold mt-6 self-center">Workout Schedule</h3>
+            <div class="self-center flex flex-row mt-3 mb-4 gap-4 items-center justify-center">
+              <img src="images/arrowLeft.svg" alt="">
+              <p class="font-bold text-sm">Feb 2024</p>
+              <img src="images/arrowRight.svg" alt="">
+            </div>
+            <div class="flex flex-row w-full justify-around text-xs">
+              <div class="flex flex-col justify-start items-center font-semibold h-20 w-16 rounded-lg p-2">
+                <p>Sun</p>
+                <p class="text-3xl">5</p>
+              </div>
+              <div class="flex flex-col justify-start items-center font-semibold h-20 w-16 rounded-lg p-2 text-white" style="background: linear-gradient(270deg, #8DA4FF -0.62%, #D1DBFF 100.68%);
+              ">
+                <p>Mon</p>
+                <p class="text-3xl">6</p>
+              </div>
+              <div class="flex flex-col justify-start items-center font-semibold h-20 w-16 rounded-lg p-2">
+                <p>Tue</p>
+                <p class="text-3xl">7</p>
+              </div>
+              <div class="flex flex-col justify-start items-center font-semibold h-20 w-16 rounded-lg p-2">
+                <p>Wed</p>
+                <p class="text-3xl">8</p>
+              </div>
+              <div class="flex flex-col justify-start items-center font-semibold h-20 w-16 rounded-lg p-2">
+                <p>Thu</p>
+                <p class="text-3xl">9</p>
+              </div>
+            </div>
+            <div class="flex flex-col w-full">
+              <div class="flex items-center h-11 w-full border-b border-black font-semibold text-xs">
+                <p>06:00 AM</p>
+              </div>
+              <div class="flex items-center h-11 w-full border-b border-black font-semibold text-xs relative">
+                <p>07:00 AM</p>
+                <div class="rounded-2xl px-4 py-1.5 absolute flex items-center justify-center text-white right-4 top-7" style="background: linear-gradient(270deg, #D3A4F4 0%, #E9B1E0 102.35%);
+                "><p>Ab Workout, 7:30am</p></div>
+              </div>
+              <div class="flex items-center h-11 w-full border-b border-black font-semibold text-xs">
+                <p>08:00 AM</p>
+              </div>
+              <div class="flex items-center h-11 w-full border-b border-black font-semibold text-xs relative">
+                <div class="rounded-full h-2 w-2 absolute bg-blue-500 top-10"></div>
+                <div class="w-5/6 h-1 border-b-2 border-blue-500 top-10 left-2 absolute z-10"></div>
+                <div class="rounded-2xl px-4 py-1.5 absolute flex items-center justify-center text-white left-20 top-4" style="background: linear-gradient(270deg, #D3A4F4 0%, #E9B1E0 102.35%);
+                "><p>Upperbody Workout, 9am</p></div>
+                <p>09:00 AM</p>
+              </div>
+              <div class="flex items-center h-11 w-full border-b border-black font-semibold text-xs">
+                <p>10:00 AM</p>
+              </div>
+              <div class="flex items-center h-11 w-full border-b border-black font-semibold text-xs">
+                <p>11:00 AM</p>
+              </div>
+              <div class="flex items-center h-11 w-full border-b border-black font-semibold text-xs">
+                <p>12:00 PM</p>
+              </div>
+              <div class="flex items-center h-11 w-full border-b border-black font-semibold text-xs">
+                <p>01:00 PM</p>
+              </div>
+              <div class="flex items-center h-11 w-full border-b border-black font-semibold text-xs relative">
+                <p>02:00 PM</p>
+                <div class="rounded-2xl px-4 py-1.5 absolute flex items-center justify-center text-black left-16 top-1 bg-gray-100" 
+                "><p>Lowerbody Workout, 3pm</p></div>
+              </div>
+              <div class="flex items-center h-11 w-full border-b border-black font-semibold text-xs">
+                <p>03:00 PM</p>
+              </div>
+              <div class="flex items-center h-11 w-full border-b border-black font-semibold text-xs">
+                <p>04:00 PM</p>
+              </div>
+              <div class="flex items-center h-11 w-full border-b border-black font-semibold text-xs">
+                <p>05:00 PM</p>
+              </div>
+              
+              </div>
+            </div>
+         </div>
+        </div>
+        <div class="flex items-center justify-center fixed bottom-0 h-20 bg-white w-full" id="navbarContainer">
+          <div class="flex flex-row w-full justify-around">
+            <img class="cursor-pointer absolute bottom-10" src="images/search.svg" alt="">
+            <img class="cursor-pointer" src="images/home.svg" alt="">
+            <img class="cursor-pointer mr-8" src="images/activity.svg" alt="">
+            <img class="cursor-pointer ml-8" src="images/camera.svg" alt="">
+            <img class="cursor-pointer" src="images/profile.svg" alt="">
+          </div>
+        </div>
+    </div>
+</body>
+</html>

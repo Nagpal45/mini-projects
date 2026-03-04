@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout app</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .custom-checkbox {
+            --checkbox-checked-color: #7B91FF; 
+            --checkbox-border-color: #7B91FF;
+            --checkbox-bg-color: #ffffff; 
+            --checkbox-checkmark-color: #7B91FF; 
+            appearance: none;
+            width: 1.4em;
+            height: 1.4em;
+            border-radius: 4px;
+            border: 2px solid var(--checkbox-border-color);
+            background-color: var(--checkbox-bg-color);
+            display: inline-block;
+            vertical-align: middle;
+            cursor: pointer;
+            position: relative; 
+        }
+        .custom-checkbox::before {
+            content: '\2713';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--checkbox-checkmark-color);
+            font-size: 13px;
+            opacity: 0;
+        }
+
+        .custom-checkbox:checked::before {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body class="flex justify-center bg-sky-100">
+    <div
+      class="w-full h-screen bg-white flex justify-between items-center flex-col"
+    >
+     <div class="flex flex-col w-full items-center">
+        <h3 class="text-xl font-bold mt-6">What are your goals?</h3>  
+        <form class="flex flex-col p-4 mt-6 gap-6 text-sm w-full font-semibold">
+            <div class="flex flex-row items-center justify-between w-full h-14 rounded-xl p-5" style="background: #F1F1F1">
+                <p>Weight Loss<p>
+                <input type="checkbox" name="weight" class="custom-checkbox" />
+            </div>
+            <div class="flex flex-row items-center justify-between w-full h-14 rounded-xl p-5" style="background: #F1F1F1">
+                <p>Muscle Gain<p>
+                <input type="checkbox" name="muscle" class="custom-checkbox" />
+            </div>
+            <div class="flex flex-row items-center justify-between w-full h-14 rounded-xl p-5" style="background: #F1F1F1">
+                <p>Flexibility and Mobility<p>
+                <input type="checkbox" name="flexmob" class="custom-checkbox" />
+            </div>
+            <div class="flex flex-row items-center justify-between w-full h-14 rounded-xl p-5" style="background: #F1F1F1">
+                <p>General Fitness<p>
+                <input type="checkbox" name="genfit" class="custom-checkbox" />
+            </div>
+            <div class="flex flex-row items-center justify-between w-full h-14 rounded-xl p-5" style="background: #F1F1F1">
+                <p>Event - Specific Training<p>
+                <input type="checkbox" name="event" class="custom-checkbox" />
+            </div>
+            <div class="flex flex-row items-center justify-between w-full h-14 rounded-xl p-5" style="background: #F1F1F1">
+                <p>Mindfulness and Mental Health<p>
+                <input type="checkbox" name="mental" class="custom-checkbox" />
+            </div>
+        </form>
+     </div>
+     <div class="w-full flex flex-col justify-center items-center mb-6">
+        <a href="tracker.html" class="w-full flex justify-center"><button style="background: linear-gradient(270deg, #7B91FF 0%, #95BEFF 100%);
+            " class="w-11/12 h-12 rounded-2xl font-semibold text-white text-md">Confirm</button></a>
+     </div>
+    </div>
+</body>
+</html>
