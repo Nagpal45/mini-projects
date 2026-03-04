@@ -1,0 +1,149 @@
+.card{
+    margin: 1.5vw;
+    width: 21vw;
+    height: 12vw;
+    border-radius: 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.card img{
+    z-index: 10;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #B5DEFF;
+    width: 3.5vw;
+    height: 3.5vw;
+}
+
+.canSelect{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+    border: white solid 0.2vw;
+}
+
+.selected{
+    border: #36f378 solid 0.2vw;
+}
+
+.top{
+    height: 50%;
+    background-color: #CAB8FF;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 1.5vw 1.5vw 0 0;
+}
+
+.left{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex: 1;
+    font-size: 0.8vw;
+    height: 100%;
+    padding: 1vw;
+    padding-top: 3vw;
+    gap: 0.5vw;
+}
+
+.detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(74, 74, 74);
+    gap: 0.5vw;
+}
+
+.detail p{
+    margin: 0;
+    font-size: 0.7vw;
+    font-weight: 600;
+}
+
+
+.right{
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: 100%;
+    font-size: 0.7vw; 
+}
+
+.right p{
+    margin-top: 1vw;
+    margin-right: 1vw;
+    border-radius: 1vw;
+    padding: 0.3vw 0.7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom{
+    background-color: white;
+    width: 100%;
+    height: 50%;
+    display: flex;align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 0 0 1.5vw 1.5vw ;
+}
+
+.bottom h4{
+    font-size: 1.5vw;
+    color: rgb(74, 74, 74);
+    margin-top: 3vw;
+}
+
+.available{
+    border: #C1FFD7 solid 0.15vw;
+    background-color: rgba(193, 255, 215,0.4);;
+    
+}
+
+.notAvailable{
+    border: #FCFFA6 solid 0.15vw;
+    background-color: rgba(252, 255, 166,0.4);
+}
+
+.dots{
+    position: absolute;
+    top:0; right:0.5vw;
+    cursor: pointer;
+}
+
+.menu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 1.5vw;
+    right:-2vw;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 1vw;
+    padding: 1vw;
+    border: 0.1vw solid rgb(174, 174, 174);
+    background: white;
+    z-index: 10;
+}
+
+.sepline{
+    width: 90%;
+    border-bottom: 0.1vw solid gray;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.menu button{
+    font-size: 0.8vw;
+    cursor: pointer;
+    border: none;
+    background: none;
+}

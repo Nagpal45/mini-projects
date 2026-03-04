@@ -1,0 +1,21 @@
+.app{
+    background-color: rgb(249, 240, 225);
+    height: 100vh;
+    overflow-y: scroll;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+*{
+    ::-webkit-scrollbar {
+        width: 0;
+      }
+    
+      -webkit-tap-highlight-color: transparent;
+}
